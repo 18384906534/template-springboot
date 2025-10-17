@@ -1,0 +1,251 @@
+/* 按钮样式 */
+.btn {
+    padding: 12px 25px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    background: #219653;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn-secondary {
+    background: #6c757d;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+}
+
+.btn-primary {
+    background: #4a90e2;
+}
+
+.btn-primary:hover {
+    background: #3a80d2;
+}
+
+.submit-btn {
+    padding: 10px 35px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #3a80d2;
+}
+
+.back-btn {
+    padding: 10px 25px;
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.back-btn:hover {
+    background: #5a6268;
+}
+
+/* 表单控件 */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s;
+    background: #ffffff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.form-control:disabled {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.form-control option {
+    padding: 8px 12px;
+    font-size: 14px;
+    background: white;
+    color: #333;
+}
+
+/* 下拉框容器 */
+.select-container {
+    position: relative;
+    width: 100%;
+}
+
+.select-container::after {
+    content: "▼";
+    font-size: 12px;
+    color: #666;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* 状态标签 */
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-incomplete {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* 信息框 */
+.info-box {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 6px;
+    border-left: 4px solid #4a90e2;
+    font-size: 14px;
+    color: #555;
+}
+
+.info-box h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+/* 筛选组 */
+.filter-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+/* 对话框样式 */
+.confirm-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirm-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    max-width: 380px;
+    text-align: center;
+}
+
+.confirm-buttons {
+    margin-top: 18px;
+}
+
+.confirm-btn {
+    padding: 7px 18px;
+    margin: 0 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.confirm-yes {
+    background: #e74c3c;
+    color: white;
+}
+
+.confirm-no {
+    background: #95a5a6;
+    color: white;
+}
+
+/* 加载覆盖层 */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 3000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4a90e2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 12px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

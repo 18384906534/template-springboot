@@ -1,13 +1,12 @@
-package cn.template.exam.service;
+package cn.template.web.exam.service;
 
-import cn.template.exam.dto.ExamAnswerQueryDTO;
-import cn.template.exam.dto.ExamCategoryDTO;
-import cn.template.exam.dto.ExamDTO;
-import cn.template.exam.dto.ExamRecordQueryDTO;
-import cn.template.exam.vo.ExamAnswerInfoVO;
-import cn.template.exam.vo.ExamInfoVO;
-import cn.template.exam.vo.ExamRecordVO;
-import cn.template.exam.vo.ExamResultVO;
+import cn.template.web.exam.dto.ExamAnswerQueryDTO;
+import cn.template.web.exam.dto.ExamCategoryDTO;
+import cn.template.web.exam.dto.ExamDTO;
+import cn.template.web.exam.dto.ExamRecordQueryDTO;
+import cn.template.web.exam.vo.ExamAnswerInfoVO;
+import cn.template.web.exam.vo.ExamInfoVO;
+import cn.template.web.exam.vo.ExamRecordVO;
 
 import java.util.List;
 
@@ -22,7 +21,7 @@ public interface IExamService {
 
     ExamInfoVO getExamInfo(ExamCategoryDTO examCategoryDto) throws Exception;
 
-    ExamResultVO saveExamRecord(ExamDTO examDTO);
+    ExamAnswerInfoVO saveExamRecord(ExamDTO examDTO);
 
 
     ExamAnswerInfoVO getExamDetailList(ExamAnswerQueryDTO examAnswerQueryDTO);

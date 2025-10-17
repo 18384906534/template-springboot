@@ -1,0 +1,364 @@
+/* 考试页面和详情页面特有样式 */
+
+/* 试卷头部 */
+.exam-header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e8e8e8;
+    position: relative;
+}
+
+.exam-title {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* 题目样式 */
+.question-item {
+    margin-bottom: 18px;
+    padding: 16px;
+    background: #f5f9f5;
+    border-radius: 6px;
+    border-left: 4px solid #4a90e2;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.question-item:hover {
+    background: #f0f7f0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.question-content {
+    flex: 1;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #444;
+}
+
+.question-score {
+    background: #4a90e2;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 12px;
+}
+
+.question-number {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+/* 单选题选项 */
+.single-choice-options {
+    margin: 12px 0;
+}
+
+.single-choice-option {
+    margin: 5px 0;
+    padding: 8px 10px;
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.single-choice-option:hover {
+    background: #f0f0f0;
+    border-color: #4a90e2;
+}
+
+.single-choice-option.selected {
+    background: #e8f4ff;
+    border-color: #4a90e2;
+}
+
+.single-choice-option input {
+    margin-right: 8px;
+    margin-top: 0;
+}
+
+.option-text {
+    flex: 1;
+    line-height: 1.4;
+    font-size: 14px;
+    word-wrap: break-word;
+    color: #444;
+}
+
+/* 文本输入框 */
+.short-answer-input, .essay-input {
+    width: 100%;
+    min-height: 80px;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 14px;
+    margin-top: 8px;
+    background: #f5f5f5;
+    line-height: 1.5;
+    transition: all 0.3s;
+    color: #444;
+}
+
+.essay-input {
+    min-height: 150px;
+}
+
+.short-answer-input:focus, .essay-input:focus {
+    background: #e8f4e8;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+/* 答案和解析 */
+.answer-analysis {
+    margin-top: 12px;
+    padding: 12px;
+    background: #f0f8ff;
+    border-radius: 4px;
+    border-left: 3px solid #4a90e2;
+    color: #444;
+}
+
+.analysis-title {
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 6px;
+}
+
+.show-answer-btn {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-top: 8px;
+    transition: background 0.3s;
+}
+
+.show-answer-btn:hover {
+    background: #219653;
+}
+
+/* 记录列表 */
+.record-list {
+    margin-top: 20px;
+}
+
+.record-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.record-table th,
+.record-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.record-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.record-table tr:hover {
+    background: #f8f9fa;
+}
+
+.record-table .action-cell {
+    white-space: nowrap;
+}
+
+/* 统计信息 */
+.stats-info {
+    text-align: center;
+    margin: 15px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 10px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a90e2;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* 题型标题 */
+.question-type-title {
+    margin: 25px 0 12px;
+    padding: 8px 12px;
+    background: #4a90e2;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 生成试卷区域 */
+.generate-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.generate-section p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+/* 详情页面特有样式 */
+.question-item.correct {
+    border-left-color: #27ae60;
+    background: #f0f9f0;
+}
+
+.question-item.wrong {
+    border-left-color: #e74c3c;
+    background: #fdf2f2;
+}
+
+.question-item.high-frequency {
+    border: 2px solid #e74c3c;
+    background: #fdf2f2;
+}
+
+.question-item.recent-correct {
+    border-left-color: #f39c12;
+    background: #fef9e7;
+}
+
+.question-item.never-wrong {
+    border-left-color: #27ae60;
+    background: #f0f9f0;
+    border: 2px solid #27ae60;
+}
+
+/* 题目元信息 */
+.question-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.wrong-count {
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.high-frequency-badge {
+    background: #e74c3c;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.recent-correct-badge {
+    background: #f39c12;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.never-wrong-badge {
+    background: #27ae60;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* 单选题答案状态 */
+.single-choice-option.correct-answer {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    border-left: 4px solid #27ae60;
+}
+
+.single-choice-option.user-wrong {
+    background: #f8d7da;
+    border-color: #f5c6cb;
+    border-left: 4px solid #e74c3c;
+}
+
+.single-choice-option.user-correct {
+    background: #d4edda;
+    border-color: #c3e6cb;
+    border-left: 4px solid #27ae60;
+}
+
+.option-status {
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.status-correct {
+    background: #27ae60;
+    color: white;
+}
+
+.status-wrong {
+    background: #e74c3c;
+    color: white;
+}

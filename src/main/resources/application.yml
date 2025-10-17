@@ -1,4 +1,29 @@
 server:
   port: 8080
   servlet:
-    context-path: /springboot
+    context-path: /cqzk-exam
+    jsp:
+      init-parameters:
+        development: true # 禁用JSP缓存，实现热加载
+
+# 服务名称
+spring:
+  application:
+    name: zk-exam
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/cqzk?useSSL=false&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    data-username: root
+    data-password: Mysql8
+    druid:
+      username: root
+      password: Mysql8
+  mvc:
+    view:
+      prefix: /views/
+      suffix: .jsp
+  devtools:
+    restart:
+      enabled: true
+  thymeleaf:
+    enabled: false
